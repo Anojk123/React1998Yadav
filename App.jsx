@@ -1,24 +1,28 @@
 
+import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css'
 
 function App() {
- 
+
+  let foodItem=["Dal","Green vegetable","Roti","Salad","Milk"];
 
   return (
-    <>
-      this is my react app in which add bootstrap.<br/><br/><br/> 
-      <button type="button" class="btn btn-primary">Primary</button>
-      <button type="button" class="btn btn-secondary">Secondary</button>
-      <button type="button" class="btn btn-success">Success</button>
-      <button type="button" class="btn btn-danger">Danger</button>
-      <button type="button" class="btn btn-warning">Warning</button>
-      <button type="button" class="btn btn-info">Info</button>
-      <button type="button" class="btn btn-light">Light</button>
-      <button type="button" class="btn btn-dark">Dark</button>
+    <div>
+      <h1>Healthy Food</h1>
+      <ul className="list-group">
+        { foodItem.map(item=><li key={item} className="list-group-item">{item}</li>)}
+        
+        {/* <li className="list-group-item">Green vegetable</li>
+        <li className="list-group-item">Roti</li>
+        <li className="list-group-item">Salad</li>
+        <li className="list-group-item">Milk</li> */}
+      </ul>
 
-      <button type="button" class="btn btn-link">Link</button>
-    </>
-  )
+    </div>
+  );
+
+
+
 }
 
 export default App
